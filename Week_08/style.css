@@ -1,11 +1,30 @@
+.darkmode {
+    --clr-light: #fdffc4;
+    --clr-dark: #1b201f;
+    --clr-white: #ffffff;
+
+    --foreground: var(--clr-light);
+    --background: var(--clr-dark);
+    --white: var(--clr-white);
+}
+
 body {
     font-family: 'IBM Plex Sans Thai', sans-serif;
+    background-color: var(--background);
     margin: 0% 5%;
+    transition : 1200ms ease-in-out
 }
 
 #heading {
     margin-top: 3%;
     font-family: 'Cabin', sans-serif;
+}
+
+#Content {
+    text-align: center; 
+    color : var(--white);
+    margin-top: -1em; 
+    transition : 1200ms ease-in-out
 }
 
 h5 {
@@ -76,15 +95,9 @@ input[type=text]:focus {
     margin :  -1.5% 0 0 3%;
 }
 
-.darkmode {
-    --clr-light: #fdffc4;
-    --clr-dark: #00332a;
-    --clr-primary: #202302;
-    --clr-secondary: #00100d;
-    --clr-accent: #ff7750;
-
-    --foreground: var(--clr-light);
-    --background: var(--clr-dark);
+#labelText {
+    color : var(--white); 
+    transition : 1200ms ease-in-out
 }
 
 .dark-mode-toggle {

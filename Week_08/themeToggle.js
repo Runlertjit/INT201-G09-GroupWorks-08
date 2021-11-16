@@ -4,24 +4,14 @@ const getHead = document.querySelector('#Content');
 const getLabel = document.querySelector('#labelText')
 
 const enableDarkMode = () => { // สำหรับ Dark Mode
-  document.body.classList.add('darkmode'); //เรียกใช้ Style darkmode 
-  getBody.setAttribute('style', //กำหนด Style สำหรับหัวข้อ
-  'background-color: rgba(0, 0, 0, 0.8); transition : 1200ms ease-in-out');
-  getHead.setAttribute('style', //กำหนด Style สำหรับพื้นหลัง (Body)
-  'text-align: center; color : white;margin-top: -1em; transition : 1200ms ease-in-out');
-  getLabel.setAttribute('style','color : white; transition : 1200ms ease-in-out')
+  document.body.classList.toggle('darkmode'); //เรียกใช้ Style darkmode 
   let cookieText = `${encodeURIComponent('darkMode')}=${encodeURIComponent('enabled')};expires=${new Date('January 1, 2022')}`
   // สร้าง text เพื่อใช้กำหนด Cookie โดยให้ darkmode = enabled
   document.cookie = cookieText; // สร้าง Cookie
 }
 
 const disableDarkMode = () => { // สำหรับ Light Mode
-  document.body.classList.remove('darkmode'); //เรียกใช้ Style darkmode
-  getBody.setAttribute('style', //กำหนด Style สำหรับหัวข้อ
-  'background-color: rgba(255, 255, 255, 0.8);transition : 1200ms ease-in-out')
-  getHead.setAttribute('style', //กำหนด Style สำหรับพื้นหลัง (Body)
-  'text-align: center; color : black;margin-top: -1em; transition : 1200ms ease-in-out');
-  getLabel.setAttribute('style','color : black; transition : 1200ms ease-in-out')
+  document.body.classList.toggle('darkmode'); //เรียกใช้ Style darkmode
   let cookieText = `${encodeURIComponent('darkMode')}=${encodeURIComponent('disable')};expires=${new Date('January 1, 2022')}`
   // สร้าง text เพื่อใช้กำหนด Cookie โดยให้ darkmode = enabled
   document.cookie = cookieText; // สร้าง Cookie
